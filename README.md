@@ -153,6 +153,98 @@ npm install
 npm start
 ```
 
+## Frontend Pages
+
+### 1. Home Page (/)
+The landing page showcases featured events, recent news, and active fundraising campaigns.
+- Hero section with mission statement
+- Featured events carousel
+- Latest news highlights
+- Active fundraising campaigns
+- Quick access to key features
+
+![Home Page](docs/screenshots/home.png)
+
+### 2. Events Page (/events)
+Browse and register for upcoming community events.
+- Event calendar view
+- Event categories filter
+- Search functionality
+- Event registration system
+- Event details with images
+
+![Events Page](docs/screenshots/events.png)
+
+### 3. Event Details (/events/:id)
+Detailed view of a specific event with registration options.
+- Event description and schedule
+- Location with map
+- Registration form
+- Attendee list
+- Related events
+
+![Event Details](docs/screenshots/event-details.png)
+
+### 4. Fundraising Hub (/fundraising-hub)
+Central location for all fundraising activities.
+- Active campaigns list
+- Campaign progress tracking
+- Donation options
+- Campaign search and filters
+- Featured campaigns
+
+![Fundraising Hub](docs/screenshots/fundraising-hub.png)
+
+### 5. Fundraiser Page (/fundraiser/:id)
+Individual fundraising campaign page.
+- Campaign details and story
+- Progress bar
+- Donation form
+- Donor wall
+- Share options
+
+![Fundraiser Page](docs/screenshots/fundraiser-page.png)
+
+### 6. News Section (/news)
+Latest updates and articles about the organization and causes.
+- News articles grid
+- Category filters
+- Search functionality
+- Featured articles
+- Article sharing
+
+![News Section](docs/screenshots/news.png)
+
+### 7. Customer Service (/customer-service)
+Support center with various assistance options.
+- AI Chatbot interface
+- Receipt management
+- Fraud detection reporting
+- Campaign inquiries
+- FAQ section
+
+![Customer Service](docs/screenshots/customer-service.png)
+
+### 8. User Profile (/profile)
+Personal dashboard for users.
+- User information
+- Donation history
+- Registered events
+- Saved campaigns
+- Communication preferences
+
+![User Profile](docs/screenshots/profile.png)
+
+### 9. About Us (/about)
+Information about the organization and its mission.
+- Organization history
+- Mission and values
+- Team members
+- Impact statistics
+- Contact information
+
+![About Us](docs/screenshots/about.png)
+
 ## Features in Detail
 
 ### Event Management
@@ -189,17 +281,6 @@ npm start
 2. **Frontend Application**: http://localhost:3001
    - Main application interface
    - Responsive design for all devices
-
-## Key Pages for Screenshots
-
-1. Home Page (/)
-2. Events Page (/events)
-3. Fundraising Hub (/fundraising-hub)
-4. News Section (/news)
-5. Customer Service (/customer-service)
-6. User Profile (/profile)
-
-[Add screenshots here]
 
 ## Technologies Used
 
