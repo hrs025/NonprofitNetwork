@@ -1,0 +1,8 @@
+Donation Receipt
+    Date: undefined
+    Donor: undefined
+    Email: undefined
+    Campaign: undefined
+    Amount Donated: $undefined
+    Thank you for your generous donation!
+    *This is a reprinted receipt*

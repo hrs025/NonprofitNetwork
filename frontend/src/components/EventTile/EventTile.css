@@ -1,0 +1,113 @@
+/* Container styling for the event tile */
+.event-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  margin: 16px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  text-align: left;
+}
+
+/* Hover effect for the event tile */
+.event-tile:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+/* Header section for event title and date */
+.event-tile-header {
+  margin-bottom: 10px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 8px;
+}
+
+/* Event title styling */
+.event-tile h3 {
+  font-size: 1.6em;
+  color: #333;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Event description styling */
+.event-description {
+  font-size: 1.1em;
+  color: #666;
+  margin: 10px 0;
+}
+
+/* Event tile meta info */
+.event-tile p {
+  margin: 8px 0;
+  color: #555;
+}
+
+/* Link button for viewing more event details */
+.view-event-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.view-event-link:hover {
+  background-color: #0056b3;
+}
+
+/* Delete button for admins */
+.delete-button {
+  padding: 10px 20px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .event-tile {
+    padding: 15px;
+  }
+
+  .event-tile h3 {
+    font-size: 1.4em;
+  }
+
+  .view-event-link, .delete-button {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-tile {
+    padding: 10px;
+  }
+
+  .event-tile h3 {
+    font-size: 1.3em;
+  }
+
+  .view-event-link, .delete-button {
+    font-size: 0.85em;
+    padding: 8px 12px;
+  }
+}

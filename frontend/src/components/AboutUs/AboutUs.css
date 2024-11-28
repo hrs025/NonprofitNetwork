@@ -1,0 +1,169 @@
+.about-us-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-us-content {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-content h2 {
+  color: #2c3e50;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.mission-statement {
+  font-size: 1.2em;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-us-content h3 {
+  color: #007bff;
+  font-size: 1.8em;
+  margin: 40px 0 20px;
+}
+
+.about-us-content p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.feature-box {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+}
+
+.feature-box h4 {
+  color: #007bff;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+.feature-box p {
+  color: #666;
+  margin: 0;
+  font-size: 0.95em;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.benefits-list li {
+  margin: 15px 0;
+  padding-left: 25px;
+  position: relative;
+  color: #666;
+}
+
+.benefits-list li:before {
+  content: "✓";
+  color: #007bff;
+  position: absolute;
+  left: 0;
+}
+
+.benefits-list strong {
+  color: #2c3e50;
+}
+
+.cta-section {
+  text-align: center;
+  background: linear-gradient(rgba(0, 123, 255, 0.05), rgba(0, 123, 255, 0.1));
+  padding: 40px;
+  border-radius: 8px;
+  margin-top: 50px;
+}
+
+.cta-section h3 {
+  margin: 0 0 20px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.cta-button {
+  padding: 12px 30px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.cta-button.primary {
+  background: #007bff;
+  color: white;
+}
+
+.cta-button.primary:hover {
+  background: #0056b3;
+  text-decoration: none;
+  color: white;
+}
+
+.cta-button.secondary {
+  background: white;
+  color: #007bff;
+  border: 2px solid #007bff;
+}
+
+.cta-button.secondary:hover {
+  background: #f8f9fa;
+  color: #0056b3;
+  border-color: #0056b3;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .about-us-content h2 {
+    font-size: 2em;
+  }
+
+  .mission-statement {
+    font-size: 1.1em;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,25 @@
+.body {
+  padding: 20px;
+  text-align: center;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around; /* Spreads features evenly */
+  flex-wrap: wrap; /* Wraps items if the screen is too small */
+  margin-top: 20px;
+}
+
+.feature {
+  width: 30%; /* Adjust width for each feature */
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .feature {
+    width: 100%; /* Stack features vertically on small screens */
+  }
+}

@@ -1,0 +1,382 @@
+.fundraising-hub {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.fundraising-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.fundraising-header h1 {
+  font-size: 2.5em;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.fundraising-subtitle {
+  color: #666;
+  font-size: 1.2em;
+}
+
+.fundraising-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.fundraising-error {
+  text-align: center;
+  padding: 40px;
+}
+
+.fundraising-error i {
+  font-size: 48px;
+  color: #dc3545;
+  margin-bottom: 20px;
+}
+
+.retry-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.retry-button:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+.fundraising-controls {
+  margin-bottom: 40px;
+}
+
+.search-bar {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.search-bar i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 15px 15px 15px 45px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.category-filter {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.category-button {
+  background: none;
+  border: 2px solid #007bff;
+  color: #007bff;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.category-button:hover {
+  background: rgba(0, 123, 255, 0.1);
+}
+
+.category-button.active {
+  background: #007bff;
+  color: white;
+}
+
+.create-campaign-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #28a745;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 20px auto;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.create-campaign-button:hover {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+.campaigns-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.no-campaigns {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+}
+
+.no-campaigns i {
+  font-size: 48px;
+  color: #dee2e6;
+  margin-bottom: 20px;
+}
+
+.create-first-campaign {
+  display: inline-block;
+  background: #28a745;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.create-first-campaign:hover {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+.campaign-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.campaign-card:hover {
+  transform: translateY(-5px);
+}
+
+.campaign-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.campaign-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder-image {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-image i {
+  font-size: 48px;
+  color: white;
+}
+
+.campaign-category {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.9em;
+}
+
+.campaign-content {
+  padding: 25px;
+}
+
+.campaign-content h3 {
+  margin: 0 0 15px;
+  color: #2c3e50;
+  font-size: 1.4em;
+}
+
+.campaign-description {
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.campaign-progress {
+  margin-bottom: 20px;
+}
+
+.progress-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.amount-raised, .amount-goal {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.value {
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(to right, #007bff, #0056b3);
+  border-radius: 4px;
+  position: relative;
+  transition: width 0.3s ease;
+}
+
+.progress-percentage {
+  position: absolute;
+  right: 5px;
+  top: -20px;
+  font-size: 12px;
+  color: #007bff;
+  font-weight: 600;
+}
+
+.campaign-meta {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+}
+
+.campaign-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.campaign-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.view-campaign-button,
+.donate-button {
+  padding: 10px;
+  border-radius: 25px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.view-campaign-button {
+  background: white;
+  color: #007bff;
+  border: 2px solid #007bff;
+}
+
+.view-campaign-button:hover {
+  background: rgba(0, 123, 255, 0.1);
+}
+
+.donate-button {
+  background: #28a745;
+  color: white;
+  border: none;
+}
+
+.donate-button:hover {
+  background: #218838;
+}
+
+@media (max-width: 768px) {
+  .fundraising-header h1 {
+    font-size: 2em;
+  }
+
+  .campaigns-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .campaign-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .category-filter {
+    gap: 8px;
+  }
+
+  .category-button {
+    padding: 6px 15px;
+    font-size: 14px;
+  }
+}

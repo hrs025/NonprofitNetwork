@@ -1,0 +1,8 @@
+Donation Receipt
+    Date: N/A
+    Donor: N/A
+    Email: N/A
+    Campaign: N/A
+    Amount Donated: $N/A
+    Thank you for your generous donation!
+    *This is a reprinted receipt*

@@ -1,0 +1,39 @@
+{
+  "name": "nonprofit-network",
+  "version": "1.0.0",
+  "description": "A comprehensive platform connecting nonprofits with donors, volunteers, and communities",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd backend && npm start\" \"cd frontend && npm start\"",
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nonprofit",
+    "community",
+    "events",
+    "donations",
+    "fundraising",
+    "networking",
+    "volunteer"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.2",
+    "multer": "^1.4.5-lts.1",
+    "openai": "^4.71.1",
+    "pdf-parse": "^1.1.1",
+    "pdfkit": "^0.15.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.1"
+  }
+}
