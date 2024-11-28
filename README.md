@@ -89,6 +89,30 @@ nonprofit-project/
    - Create an API key from: https://platform.openai.com/api-keys
    - Save the API key for configuration
 
+## Environment Variables
+
+### Backend (.env)
+Create a `.env` file in the backend directory with the following variables:
+```
+PORT=3000
+NODE_ENV=development
+MONGODB_URI=mongodb://localhost:27017/nonprofit-network
+JWT_SECRET=your_jwt_secret_here
+JWT_EXPIRE=30d
+OPENAI_API_KEY=your_openai_api_key_here
+MAX_FILE_SIZE=5242880
+```
+
+### Frontend (.env)
+Create a `.env` file in the frontend directory with the following variables:
+```
+REACT_APP_API_URL=http://localhost:3000/api
+REACT_APP_SOCKET_URL=http://localhost:3000
+REACT_APP_STRIPE_PUBLIC_KEY=your_stripe_public_key_here
+```
+
+Note: Never commit your `.env` files to version control. They are already included in `.gitignore`.
+
 ## Detailed Setup Instructions
 
 ### 1. Database Setup
@@ -112,16 +136,6 @@ cd backend
 
 # Install dependencies
 npm install
-
-# Create .env file
-# Add the following configurations:
-PORT=3000
-NODE_ENV=development
-MONGODB_URI=mongodb://localhost:27017/nonprofit-network
-JWT_SECRET=your_jwt_secret_here
-JWT_EXPIRE=30d
-OPENAI_API_KEY=your_openai_api_key_here
-MAX_FILE_SIZE=5242880
 
 # Start backend server
 npm start
