@@ -70,7 +70,6 @@ nonprofit-project/
         │   └── CustomerService/
         ├── config/
         └── App.js
-
 ```
 
 ## Prerequisites
@@ -113,9 +112,15 @@ REACT_APP_STRIPE_PUBLIC_KEY=your_stripe_public_key_here
 
 Note: Never commit your `.env` files to version control. They are already included in `.gitignore`.
 
-## Detailed Setup Instructions
+## Setup Instructions
 
-### 1. Database Setup
+### 1. Clone the Repository
+```bash
+git clone https://github.com/hrs025/NonprofitNetwork.git
+cd nonprofit-project
+```
+
+### 2. Database Setup
 ```bash
 # Start MongoDB service
 # Windows
@@ -129,7 +134,7 @@ mongosh
 use nonprofit-network
 ```
 
-### 2. Backend Setup
+### 3. Backend Setup
 ```bash
 # Navigate to backend directory
 cd backend
@@ -141,7 +146,7 @@ npm install
 npm start
 ```
 
-### 3. Frontend Setup
+### 4. Frontend Setup
 ```bash
 # Navigate to frontend directory
 cd frontend
@@ -163,7 +168,7 @@ The landing page showcases featured events, recent news, and active fundraising 
 - Active fundraising campaigns
 - Quick access to key features
 
-![Home Page](docs/screenshots/home.png)
+![Home Page](docs/screenshots/Home.png)
 
 ### 2. Events Page (/events)
 Browse and register for upcoming community events.
@@ -173,7 +178,7 @@ Browse and register for upcoming community events.
 - Event registration system
 - Event details with images
 
-![Events Page](docs/screenshots/events.png)
+![Events Page](docs/screenshots/Events.png)
 
 ### 3. Event Details (/events/:id)
 Detailed view of a specific event with registration options.
@@ -183,7 +188,7 @@ Detailed view of a specific event with registration options.
 - Attendee list
 - Related events
 
-![Event Details](docs/screenshots/event-details.png)
+![Event Details](docs/screenshots/EventDetails.png)
 
 ### 4. Fundraising Hub (/fundraising-hub)
 Central location for all fundraising activities.
@@ -193,7 +198,7 @@ Central location for all fundraising activities.
 - Campaign search and filters
 - Featured campaigns
 
-![Fundraising Hub](docs/screenshots/fundraising-hub.png)
+![Fundraising Hub](docs/screenshots/Fundraising%20Hub.png)
 
 ### 5. Fundraiser Page (/fundraiser/:id)
 Individual fundraising campaign page.
@@ -203,7 +208,7 @@ Individual fundraising campaign page.
 - Donor wall
 - Share options
 
-![Fundraiser Page](docs/screenshots/fundraiser-page.png)
+![Fundraiser Page](docs/screenshots/Fundraiser%20page.png)
 
 ### 6. News Section (/news)
 Latest updates and articles about the organization and causes.
@@ -213,7 +218,7 @@ Latest updates and articles about the organization and causes.
 - Featured articles
 - Article sharing
 
-![News Section](docs/screenshots/news.png)
+![News Section](docs/screenshots/News.png)
 
 ### 7. Customer Service (/customer-service)
 Support center with various assistance options.
@@ -223,7 +228,7 @@ Support center with various assistance options.
 - Campaign inquiries
 - FAQ section
 
-![Customer Service](docs/screenshots/customer-service.png)
+![Customer Service](docs/screenshots/Customer%20Service.png)
 
 ### 8. User Profile (/profile)
 Personal dashboard for users.
@@ -233,7 +238,7 @@ Personal dashboard for users.
 - Saved campaigns
 - Communication preferences
 
-![User Profile](docs/screenshots/profile.png)
+![User Profile](docs/screenshots/Profile.png)
 
 ### 9. About Us (/about)
 Information about the organization and its mission.
@@ -243,53 +248,83 @@ Information about the organization and its mission.
 - Impact statistics
 - Contact information
 
-![About Us](docs/screenshots/about.png)
+![About Us](docs/screenshots/About.png)
 
-## Features in Detail
+## Features
+
+### Authentication
+- Secure user registration and login
+- JWT-based authentication
+- Role-based access control
+- Password recovery system
 
 ### Event Management
-- Create events with details, images, and capacity limits
-- Track registrations and attendance
+- Create and manage events
+- Event registration system
+- Attendance tracking
 - Event categories and filtering
-- Registration confirmation system
+- Image upload support
 
-### Fundraising Campaigns
-- Create fundraising campaigns with goals
-- Track donation progress
-- Secure payment processing
-- Donor recognition system
-- Campaign updates and notifications
+### Fundraising System
+- Campaign creation and management
+- Secure donation processing
+- Progress tracking
+- Donor recognition
+- Campaign analytics
+- Receipt generation
 
 ### News System
 - Article creation and management
-- Rich text editor for content
+- Rich text editor
 - Image upload support
-- Search and filter functionality
+- Category management
+- Search functionality
 
 ### AI Support System
-- Chatbot for common queries
-- Receipt processing and management
-- Fraud detection for donations
-- Automated customer support
+- OpenAI-powered chatbot
+- Natural language processing
+- Automated response system
+- Context-aware conversations
+- Learning capabilities
 
-## Access Points
+## API Documentation
 
-1. **Backend API**: http://localhost:3000
-   - API documentation available at /api-docs
-   - Health check at /health
+### Authentication Endpoints
+- POST /api/users/register - User registration
+- POST /api/users/login - User login
+- GET /api/users/profile - Get user profile
+- PUT /api/users/profile - Update user profile
 
-2. **Frontend Application**: http://localhost:3001
-   - Main application interface
-   - Responsive design for all devices
+### Event Endpoints
+- GET /api/events - List all events
+- POST /api/events - Create new event
+- GET /api/events/:id - Get event details
+- PUT /api/events/:id - Update event
+- DELETE /api/events/:id - Delete event
+
+### Campaign Endpoints
+- GET /api/campaigns - List all campaigns
+- POST /api/campaigns - Create new campaign
+- GET /api/campaigns/:id - Get campaign details
+- PUT /api/campaigns/:id - Update campaign
+- POST /api/campaigns/:id/donate - Make donation
+
+### News Endpoints
+- GET /api/news - List all articles
+- POST /api/news - Create new article
+- GET /api/news/:id - Get article details
+- PUT /api/news/:id - Update article
+- DELETE /api/news/:id - Delete article
 
 ## Technologies Used
 
 ### Frontend
 - React.js 18
-- CSS3 with modern features
-- HTML5
-- Axios for API calls
 - React Router for navigation
+- Axios for API calls
+- CSS3 with modern features
+- React Icons
+- JWT for authentication
 
 ### Backend
 - Node.js
@@ -301,6 +336,23 @@ Information about the organization and its mission.
 
 ### Additional Tools
 - OpenAI GPT for chatbot
-- MongoDB Atlas (optional for cloud database)
-- JWT for secure authentication
-- Express Validator for input validation
+- MongoDB Atlas (optional)
+- JWT for authentication
+- Express Validator
+- Stripe for payments
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contact
+
+Project Link: [https://github.com/hrs025/NonprofitNetwork](https://github.com/hrs025/NonprofitNetwork)
